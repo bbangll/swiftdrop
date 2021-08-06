@@ -1,0 +1,20 @@
+#btnIcon {
+    border-radius: 100px;
+    background: transparent;
+    border: 1px solid white;
+    height: 35px;
+    width: 35px;
+    margin: 0 0 0 10px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#btnImage {
+    height: 50%;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}

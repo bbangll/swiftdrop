@@ -1,0 +1,18 @@
+#btnHomeBlock {
+    display: flex;
+    align-items: center;
+}
+#btnHomeImg {
+    height: 35px;
+    width: auto;
+    margin: 0 10px 0 0 ;
+    padding: 0;
+}
+#btnHomeTxt {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    color: white;
+}

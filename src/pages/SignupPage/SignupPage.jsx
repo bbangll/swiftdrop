@@ -64,65 +64,66 @@ export default function SignUpPage(props){
 
     return (
         <div className="detailBlock">
-        <h1 id="detailHeader"> Sign Up page </h1>
-        <div id="formLine"></div>
-        <form autoComplete="off" onSubmit={handleSubmit}>
-            <FieldInput 
-                name="firstName"
-                type="text"
-                placeholder="e.g. John"
-                labelText="First Name"
-                value={ state.firstName}
-                onChange={handleChange}
-                required 
-            />
-            <FieldInput 
-                name="emailaddress"
-                type="email"
-                placeholder="e.g. Email Address"
-                labelText="Emaill Address"
-                value={ state.emailaddress}
-                onChange={handleChange}
-                required 
-            />
-            <FieldInput 
-                name="password"
-                type="password"
-                placeholder="Minimum 8 Characters"
-                labelText="Password"
-                value={ state.password}
-                onChange={handleChange}
-                required 
-            />
-             <FieldInput 
-                name="passwordConf"
-                type="password"
-                placeholder="Minimum 8 Characters"
-                labelText="Password"
-                value={ state.passwordConf}
-                onChange={handleChange}
-                required 
-            />
-            <FieldInput 
-                name="address"
-                type="text"
-                placeholder="e.g. 56 Wandon st, Queensland"
-                labelText="Address"
-                value={ state.address}
-                onChange={handleChange}
-                required 
-            />
+            <h1 id="detailHeader"> Sign Up page </h1>
+            <div id="formLine"></div>
+            <form autoComplete="off" onSubmit={handleSubmit}>
+                <FieldInput 
+                    name="firstName"
+                    type="text"
+                    placeholder="e.g. John"
+                    labelText="First Name"
+                    value={ state.firstName}
+                    onChange={handleChange}
+                    required 
+                />
+                <FieldInput 
+                    name="emailaddress"
+                    type="email"
+                    placeholder="e.g. Email Address"
+                    labelText="Emaill Address"
+                    value={ state.emailaddress}
+                    onChange={handleChange}
+                    required 
+                />
+                <FieldInput 
+                    name="password"
+                    type="password"
+                    placeholder="Minimum 8 Characters"
+                    labelText="Password"
+                    value={ state.password}
+                    onChange={handleChange}
+                    required 
+                />
+                <FieldInput 
+                    name="passwordConf"
+                    type="password"
+                    placeholder="Minimum 8 Characters"
+                    labelText="Password"
+                    value={ state.passwordConf}
+                    onChange={handleChange}
+                    required 
+                />
+                <FieldInput 
+                    name="address"
+                    type="text"
+                    placeholder="e.g. 56 Wandon st, Queensland"
+                    labelText="Address"
+                    value={ state.address}
+                    onChange={handleChange}
+                    required 
+                />
 
-            <FileInput 
-                type="file"
-                name="photo"
-                placeholder="upload image"
-                onChange={handleFileInput}
-            />
+                <FileInput 
+                    type="file"
+                    name="photo"
+                    placeholder="upload image"
+                    onChange={handleFileInput}
+                />
 
-            <FormButton type="submit" buttonText="Sign Up" />
-            {error ? <ErrorMessage error={error} /> : null}
-        </form>
+                <FormButton type="submit" buttonText="Sign Up" />
+
+                {error ? <ErrorMessage error={error} /> : null}
+            </form>
         </div>
     );   
     

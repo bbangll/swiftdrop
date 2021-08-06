@@ -1,5 +1,5 @@
 import React from "react";
-import './FileInput.css'
+import './FileInput.css';
 
 function FileInput(props) {
     return (

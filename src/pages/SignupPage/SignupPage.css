@@ -1,0 +1,24 @@
+.detailBlock {
+    display: flex;
+    height: auto;
+    width: 30%;
+    max-width: 1080px;
+    margin: 60px 0 60px 0;
+    flex-direction: column;
+}
+
+#detailHeader {
+    font-family: 'Poppins', sans-serif;
+    color: #F1F1F1;
+    font-size: 30px;
+    font-weight: 800;
+    margin: 0 0 30px 0;;
+}
+
+#formLine {
+    background: white;
+    height: 1px;
+    width: 100%;
+    opacity: 20%;
+    margin: 0 0 50px 0;
+}

@@ -1,0 +1,39 @@
+
+.FieldInputBlock {
+    display: flex;
+    flex-direction: column;
+}
+
+#FieldInputLabel {
+    color: white;
+    font-size: 20px;
+    margin: 0 0 5px 0;
+}
+
+#FieldInput {
+    background: transparent;
+    width: 100%;
+    margin: 0;
+    color: white;
+    height: 20px;
+    border: none;
+    margin: 0 0 10px 0;
+    font-weight: 300;
+    font-size: 20px;
+    outline: none
+}
+
+::placeholder {
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+    opacity: 30%;
+}
+
+#FieldInputLine {
+    background: white;
+    height: 1px;
+    width: 100%;
+    opacity: 20%;
+    margin: 0 0 20px 0;
+}

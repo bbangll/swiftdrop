@@ -2,17 +2,16 @@ import React, { useState } from 'react';
 import './LoginPage.css';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage'
 import userService from '../../utils/userService';
+import FormButton from '../../components/FormButton/FormButton';
+import Form from '../../components/Form/Form';
+import FieldInput from '../../components/FieldInput/FieldInput';
 
-
-export default function LoginPage(props){
-    
+function LoginPage(props){
 
     return (
-      
-          
-             <h1>setup signup PAGE</h1>
-    
-      
-      );
+       <h1> Login </h1>
+    );
 }
+
+export default LoginPage;
 

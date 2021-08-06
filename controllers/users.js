@@ -11,8 +11,8 @@ module.exports = {
   login
 };
 
-function signup(req, res) {
-  console.log(req.body, req.file)
+async function signup(req, res) {
+  console.log(req.body, req.file, 'signup controller')
 
   //////////////////////////////////////////////////////////////////////////////////
   //////////////////////////////////////////////////////////////////////////////////
@@ -25,6 +25,7 @@ function signup(req, res) {
   //////////////////////////////////////////////////////////////////////////////////
   s3.upload(params, async function(err, data){
     console.log(data, 'from aws') // data.Location is our photoUrl that exists on aws
+    console.log(err, 'response from aws')
     const user = new User({...req.body, photoUrl: data.Location});
     try {
       await user.save();
@@ -34,12 +35,8 @@ function signup(req, res) {
       // Probably a duplicate email
       res.status(400).json(err);
     }
-
-
-
   })
   //////////////////////////////////////////////////////////////////////////////////
- 
 }
 
 async function login(req, res) {

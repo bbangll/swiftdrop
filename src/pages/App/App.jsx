@@ -3,7 +3,7 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
-import userService from '../../utils/userService'
+import userService from '../../utils/userService';
 
 
 function App() {
@@ -12,8 +12,8 @@ function App() {
   // this object corresponds to the jwt payload which is defined in the server signup or login function that looks like 
   // this  const token = createJWT(user); // where user was the document we created from mongo
 
-  function handleSignUpOrLogin(){
-    setUser(userService.getUser()) // getting the user from localstorage decoding the jwt
+  function handleSignupOrLogin(){
+    setUser(userService.getUser());
   }
 
   function handleLogout(){
@@ -25,10 +25,10 @@ function App() {
     <div className="App">
       <Switch>
           <Route exact path="/login">
-             <LoginPage handleSignUpOrLogin={handleSignUpOrLogin}/>
+            <LoginPage />
           </Route>
           <Route exact path="/signup">
-             <SignupPage handleSignUpOrLogin={handleSignUpOrLogin}/>
+            <SignupPage handleSignupOrLogin={handleSignupOrLogin}/>
           </Route>
           {userService.getUser() ? 
             <> 

@@ -13,7 +13,7 @@ export default function SignUpPage(props){
     const history = useHistory();
     const [state, setState] = useState({
         firstName: '',
-        emailaddress: '',
+        email: '',
         password: '',
         passwordConf: '',
         address: ''
@@ -53,7 +53,7 @@ export default function SignUpPage(props){
             console.log(formData.forEach((item) => console.log(item)))
             await userService.signup(formData);
             props.handleSignupOrLogin()
-            history.push('/')
+            history.push('/login')
 
         } catch(err){
             console.log(err.message)
@@ -77,7 +77,7 @@ export default function SignUpPage(props){
                     required 
                 />
                 <FieldInput 
-                    name="emailaddress"
+                    name="email"
                     type="email"
                     placeholder="e.g. Email Address"
                     labelText="Emaill Address"

@@ -1,29 +1,38 @@
 import React, { useState } from 'react';
 import './LoginPage.css';
-import ErrorMessage from '../../components/ErrorMessage/ErrorMessage'
 import userService from '../../utils/userService';
 import FormButton from '../../components/FormButton/FormButton';
 import FieldInput from '../../components/FieldInput/FieldInput';
-import BtnIcon from '../../components/BtnIcon/BtnIcon';
-import ItemCard from '../../components/ItemCard/ItemCard';
-import BtnHome from '../../components/BtnHome/BtnHome';
+import FormNav from '../../components/FormNav/FormNav';
 import '../../../public/Plus.svg'
-import HomeHeader from '../../components/HomeHeader/HomeHeader';
 
 function LoginPage(props){
 
     return (
 
-        <>
-            <HomeHeader />
-            <h1> Login </h1>
-            <BtnIcon />
-            <BtnIcon />
-            <BtnHome />
-            <ItemCard />
-            <ItemCard />
-            
-        </>
+        <div className="detailBlock">
+            <FormNav />
+            <h1 id="detailHeader"> Login </h1>
+            <div id="formLine"></div>
+            <form autoComplete="off">
+                <FieldInput 
+                    name="email"
+                    type="email"
+                    placeholder="e.g. Email Address"
+                    labelText="Emaill Address"
+                    required 
+                />
+                <FieldInput 
+                    name="password"
+                    type="password"
+                    placeholder="Minimum 8 Characters"
+                    labelText="Password"
+                    required 
+                />
+
+                <FormButton type="submit" buttonText="Sign Up" />
+            </form>
+    </div>
 
     );
 }

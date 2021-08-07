@@ -1,0 +1,18 @@
+#HomeBlock {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 1660px;
+    justify-content: center;
+}
+
+#HomeMain {
+    height: auto;
+    width: 80%;
+}
+
+#itemBlock {
+    display: flex;
+    flex-wrap: wrap;
+}

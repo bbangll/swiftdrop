@@ -1,7 +1,7 @@
 #HomeHeaderBlock {
-    background: cornflowerblue;
     height: auto;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    margin: 50px 0 50px 0;
 }

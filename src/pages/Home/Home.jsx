@@ -1,60 +1,70 @@
-import React, { useState } from "react";
-import FieldInput from '../../components/FieldInput/FieldInput';
-import FileInput from '../../components/FileInput/FileInput';
-import FormButton from '../../components/FormButton/FormButton';
+import React, { useState, useEffect } from "react";
+import AddPost from '../../components/AddPostForm/AddPostForm';
+import HomeHeader from '../../components/HomeHeader/HomeHeader';
 import { useHistory } from 'react-router-dom';
+import ItemCard from "../../components/ItemCard/ItemCard";
+import './Home.css'
 
-function Home() {
-    const [selectedFile, setSelectedFile] = useState('')
-    const [state, setState] = useState({
-        itemName: ''
-    })
 
-    function handleFileInput(e){
-        setSelectedFile(e.target.files[0])
-    }
-
-    function handleChange(e){
-        setState({
-          ...state,
-          [e.target.name]: e.target.value
-        })
-    }
-
-    function handleSubmit(e){
-        e.preventDefault()
-                 
-        const formData = new FormData()
-        formData.append('photo', selectedFile)
-        formData.append('itemName', state.itemName)
-        
-        // Have to submit the form now! We need a function!
-    }
-
+function Home(props) {
 
     return (
-        <div className="detailBlock">
-            <h1 id="detailHeader"> Sign Up page </h1>
-            <div id="formLine"></div>
-            <form autoComplete="off" onSubmit={handleSubmit}>
-                <FieldInput 
-                    name="itemName"
-                    type="text"
-                    placeholder="e.g. John"
-                    labelText="Item Name"
-                    value={state.itemName}
-                    onChange={handleChange}
-                    required 
-                />
-                <FileInput 
-                    type="file"
-                    name="photo"
-                    placeholder="upload image"
-                    onChange={handleFileInput}
-                />
-
-                <FormButton type="submit" buttonText="Create Item" />
-            </form>
+        <div id="HomeBlock">
+            <main id="HomeMain">
+                <HomeHeader />
+                <div id="itemBlock">
+                    <ItemCard 
+                        src="https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        itemName="Ferrari Black Italia"
+                        itemSeller="Italian Rental"
+                        itemPrice="$350.00/Night"
+                    />
+                    <ItemCard 
+                        src="https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        itemName="Ferrari Black Italia"
+                        itemSeller="Italian Rental"
+                        itemPrice="$350.00/Night"
+                    />
+                    <ItemCard 
+                        src="https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        itemName="Ferrari Black Italia"
+                        itemSeller="Italian Rental"
+                        itemPrice="$350.00/Night"
+                    />
+                    <ItemCard 
+                        src="https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        itemName="Ferrari Black Italia"
+                        itemSeller="Italian Rental"
+                        itemPrice="$350.00/Night"
+                    />
+                    <ItemCard 
+                        src="https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        itemName="Ferrari Black Italia"
+                        itemSeller="Italian Rental"
+                        itemPrice="$350.00/Night"
+                    />
+                    <ItemCard 
+                        src="https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        itemName="Ferrari Black Italia"
+                        itemSeller="Italian Rental"
+                        itemPrice="$350.00/Night"
+                    />
+                    <ItemCard 
+                        src="https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        itemName="Ferrari Black Italia"
+                        itemSeller="Italian Rental"
+                        itemPrice="$350.00/Night"
+                    />
+                    <ItemCard 
+                        src="https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        itemName="Ferrari Black Italia"
+                        itemSeller="Italian Rental"
+                        itemPrice="$350.00/Night"
+                    />
+                    
+                </div>
+            </main>
+            
         </div>
     );
 }

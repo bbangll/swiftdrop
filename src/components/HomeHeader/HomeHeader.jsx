@@ -8,7 +8,7 @@ function HomeHeader() {
         <div id="HomeHeaderBlock">
             <BtnHome />
             <div id="HomeHeaderButtons">
-                <BtnIcon />
+                <BtnIcon to="/login"/>
             </div>
         </div>
     )
